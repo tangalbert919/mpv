@@ -1551,6 +1551,7 @@ if cocoa.found() and swift.allowed()
     swift_sources += files('osdep/macos/libmpv_helper.swift',
                            'osdep/macos/log_helper.swift',
                            'osdep/macos/mpv_helper.swift',
+                           'osdep/macos/precise_timer.swift',
                            'osdep/macos/swift_compat.swift',
                            'osdep/macos/swift_extensions.swift',
                            'video/out/mac/common.swift',
