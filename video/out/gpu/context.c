@@ -51,6 +51,7 @@ extern const struct ra_ctx_fns ra_ctx_vulkan_win;
 extern const struct ra_ctx_fns ra_ctx_vulkan_xlib;
 extern const struct ra_ctx_fns ra_ctx_vulkan_android;
 extern const struct ra_ctx_fns ra_ctx_vulkan_display;
+extern const struct ra_ctx_fns ra_ctx_vulkan_macos;
 
 /* Direct3D 11 */
 extern const struct ra_ctx_fns ra_ctx_d3d11;
@@ -113,6 +114,11 @@ static const struct ra_ctx_fns *contexts[] = {
 #if HAVE_VK_KHR_DISPLAY
     &ra_ctx_vulkan_display,
 #endif
+// check for molten instead?
+#if HAVE_COCOA
+    &ra_ctx_vulkan_macos,
+#endif
+
 #endif
 
 /* No API contexts: */

@@ -1289,6 +1289,10 @@ if features['vulkan'] and features['x11']
      sources += files('video/out/vulkan/context_xlib.c')
 endif
 
+if features['vulkan'] and features['cocoa']
+    sources += files('video/out/vulkan/context_mac.m')
+endif
+
 features += {'vk-khr-display': cc.has_function('vkCreateDisplayPlaneSurfaceKHR', prefix: '#include <vulkan/vulkan_core.h>',
                                                dependencies: [vulkan])}
 if features['vk-khr-display']
@@ -1550,9 +1554,11 @@ if cocoa.found() and swift.allowed()
                            'osdep/macos/swift_compat.swift',
                            'osdep/macos/swift_extensions.swift',
                            'video/out/mac/common.swift',
+                           'video/out/mac/metal_layer.swift',
                            'video/out/mac/title_bar.swift',
                            'video/out/mac/view.swift',
-                           'video/out/mac/window.swift')
+                           'video/out/mac/window.swift',
+                           'video/out/mac_common.swift')
 endif
 
 macos_cocoa_cb = get_option('macos-cocoa-cb').require(
