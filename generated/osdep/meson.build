@@ -23,8 +23,28 @@ if macos_10_11_features.allowed()
     swift_flags += ['-D', 'HAVE_MACOS_10_11_FEATURES']
 endif
 
+if macos_10_11_2_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_10_11_2_FEATURES']
+endif
+
+if macos_10_12_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_10_12_FEATURES']
+endif
+
+if macos_10_12_2_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_10_12_2_FEATURES']
+endif
+
 if macos_10_14_features.allowed()
     swift_flags += ['-D', 'HAVE_MACOS_10_14_FEATURES']
+endif
+
+if macos_10_14_6_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_10_14_6_FEATURES']
+endif
+
+if macos_10_15_4_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_10_15_4_FEATURES']
 endif
 
 extra_flags = get_option('swift-flags').split()

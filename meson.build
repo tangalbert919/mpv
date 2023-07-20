@@ -1520,6 +1520,16 @@ macos_10_11_features = get_option('macos-10-11-features').require(
     error_message: 'a suitable macos sdk version could not be found!',
 )
 
+macos_10_11_2_features = get_option('macos-10-11-2-features').require(
+    macos_sdk_version.version_compare('>=10.11.2'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
+macos_10_12_features = get_option('macos-10-12-features').require(
+    macos_sdk_version.version_compare('>=10.12'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
 macos_10_12_2_features = get_option('macos-10-12-2-features').require(
     macos_sdk_version.version_compare('>=10.12.2'),
     error_message: 'a suitable macos sdk version could not be found!',
@@ -1527,6 +1537,16 @@ macos_10_12_2_features = get_option('macos-10-12-2-features').require(
 
 macos_10_14_features = get_option('macos-10-14-features').require(
     macos_sdk_version.version_compare('>=10.14'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
+macos_10_14_6_features = get_option('macos-10-14-6-features').require(
+    macos_sdk_version.version_compare('>=10.14.6'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
+macos_10_15_4_features = get_option('macos-10-15-4-features').require(
+    macos_sdk_version.version_compare('>=10.15.4'),
     error_message: 'a suitable macos sdk version could not be found!',
 )
 
