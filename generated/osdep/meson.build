@@ -47,6 +47,14 @@ if macos_10_15_4_features.allowed()
     swift_flags += ['-D', 'HAVE_MACOS_10_15_4_FEATURES']
 endif
 
+if macos_11_0_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_11_0_FEATURES']
+endif
+
+if macos_12_0_features.allowed()
+    swift_flags += ['-D', 'HAVE_MACOS_12_0_FEATURES']
+endif
+
 extra_flags = get_option('swift-flags').split()
 swift_flags += extra_flags
 

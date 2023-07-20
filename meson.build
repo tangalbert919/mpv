@@ -1550,6 +1550,16 @@ macos_10_15_4_features = get_option('macos-10-15-4-features').require(
     error_message: 'a suitable macos sdk version could not be found!',
 )
 
+macos_11_0_features = get_option('macos-11-0-features').require(
+    macos_sdk_version.version_compare('>=11.0'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
+macos_12_0_features = get_option('macos-12-0-features').require(
+    macos_sdk_version.version_compare('>=12.0'),
+    error_message: 'a suitable macos sdk version could not be found!',
+)
+
 swift = get_option('swift-build').require(
     darwin and macos_sdk_version.version_compare('>=10.10') and swift_ver.version_compare('>=4.1'),
     error_message: 'A suitable macos sdk version or swift version could not be found!',

@@ -57,6 +57,13 @@ enum {
     // no documentation?
     MAC_CSP_EXTENDED_DISPLAY_P3, //macOS 11.0+
     MAC_CSP_EXTENDED_ITUR_2020, //macOS 11.0+
+    MAC_CSP_ITUR_2020_SRGBGAMMA, //macOS 12.0+
+    MAC_CSP_ITUR_2100_HLG, //macOS 11.0+
+    MAC_CSP_ITUR_2100_PQ, //macOS 11.0+
+    MAC_CSP_ITUR_709_HLG, //macOS 12.0+
+    MAC_CSP_ITUR_709_PQ, //macOS 12.0+
+    MAC_CSP_LINEAR_DISPLAY_P3, //macOS 12.0+
+    MAC_CSP_LINEAR_ITUR_2020, //macOS 12.0+
 };
 
 struct macos_opts {

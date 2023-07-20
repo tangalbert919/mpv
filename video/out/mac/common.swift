@@ -483,6 +483,36 @@ class Common: NSObject {
         }
 #endif
 
+#if HAVE_MACOS_11_0_FEATURES
+        if #available(macOS 11.0, *) {
+            switch outputCsp {
+            case MAC_CSP_ITUR_2100_HLG:
+                return CGColorSpace(name: CGColorSpace.itur_2100_HLG)
+            case MAC_CSP_ITUR_2100_PQ:
+                return CGColorSpace(name: CGColorSpace.itur_2100_PQ)
+            default: break
+            }
+        }
+#endif
+
+#if HAVE_MACOS_12_0_FEATURES
+        if #available(macOS 12.0, *) {
+            switch outputCsp {
+            case MAC_CSP_ITUR_2020_SRGBGAMMA:
+                return CGColorSpace(name: CGColorSpace.itur_2020_sRGBGamma)
+            case MAC_CSP_ITUR_709_HLG:
+                return CGColorSpace(name: CGColorSpace.itur_709_HLG)
+            case MAC_CSP_ITUR_709_PQ:
+                return CGColorSpace(name: CGColorSpace.itur_709_PQ)
+            case MAC_CSP_LINEAR_DISPLAY_P3:
+                return CGColorSpace(name: CGColorSpace.linearDisplayP3)
+            case MAC_CSP_LINEAR_ITUR_2020:
+                return CGColorSpace(name: CGColorSpace.linearITUR_2020)
+            default: break
+            }
+        }
+#endif
+
         log.sendWarning("Couldn't retrieve configured color space, falling back to auto")
 
         return colorSpace

@@ -6271,6 +6271,20 @@ them.
     :linear_srgb:        Same as sRGB but linear transfer function.
     :generic_rgb_linear: RGB and linear transfer function.
     :adobe_rgb1998:      Adobe RGB (1998) color space.
+    :itur_2020_srgbgamma:ITU BT.2020 color space and sRGB gamma transfer
+                         function.
+    :itur_2100_hlg:      ITU BT.2100 color space and the Hybrid Log-Gamma (HLG)
+                         transfer function.
+    :itur_2100_pq:       ITU BT.2100 color space and the Perceptual Quantizer
+                         (PQ) transfer function.
+    :itur_709_hlg:       ITU BT.709 color space and the Hybrid Log-Gamma (HLG)
+                         transfer function.
+    :itur_709_pq:        ITU BT.709 color space and the Perceptual Quantizer
+                         (PQ) transfer function.
+    :linear_display_p3:  DCI P3 primaries, a D65 white point, and the linear
+                         transfer function.
+    :linear_itur_2020:   ITU BT.2020 color space and the linear transfer
+                         function.
 
     macOS only.
 
