@@ -16,7 +16,11 @@
  */
 
 #include "video/out/gpu/context.h"
+#if XCODE_BACKEND
+#import <mpv_2-Swift.h>
+#else
 #include "osdep/macOS_swift.h"
+#endif
 
 //#import <MoltenVK/mvk_vulkan.h>
 
